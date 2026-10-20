@@ -9,8 +9,8 @@ st.set_page_config(page_title="Missions", layout='centered')
 st.title("Missions")
 # Create Missions select box
 missions = [
-"AI Study Buddy (Mission 1)",
-"BlazeX Email Creator (Mission 2)",
+"AI Study Buddy (Mission 1) 🤖",
+"BlazeX Email Creator (Mission 2) 📧",
 "National Id Validator (Mission 3)"
 ]
 m = st.selectbox("Chosse Which Mission to show", options=missions)
@@ -18,9 +18,9 @@ m = st.selectbox("Chosse Which Mission to show", options=missions)
 st.divider()
 
 # Check Which Mission To display
-if m == "AI Study Buddy (Mission 1)":
+if m == "AI Study Buddy (Mission 1) 🤖":
     stud()
-elif m == "BlazeX Email Creator (Mission 2)":
+elif m == "BlazeX Email Creator (Mission 2) 📧":
     blaze()
 else:
     niv()
