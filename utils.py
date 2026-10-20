@@ -209,6 +209,7 @@ def niv():
            m = int(f"{id[3]}{id[4]}")
            # Get Day
            d = int(f"{id[5]}{id[6]}")
+           # Create a table inside an expander to hold the information
            data_n = {"Century": c, "Year": y, "Month": m, "Day": d}
            expand = st.expander("Extra Information")
            expand.table(data_n)
