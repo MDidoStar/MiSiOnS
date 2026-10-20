@@ -1,3 +1,6 @@
+import streamlit as st
+from random import randint as ri
+from time import sleep as sl
 def wait(l,s):
     with st.spinner(l):
         sl(s)
