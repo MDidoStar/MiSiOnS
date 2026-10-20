@@ -1,9 +1,51 @@
+# Import Libraries and Modules
 import streamlit as st
 from random import randint as ri
 from time import sleep as sl
+
+# Create Helpful Functions
 def wait(l,s):
+    # A function that creates a spinner for a number of seconds
+    # Used after Clicking buttons
     with st.spinner(l):
         sl(s)
+        
+def gen_two():
+    # Generate two Random Digits
+    # Used Mission 2 Blaze X
+    f = f"{ri(0,9)}"
+    f = f"{f}{ri(0,9)}"
+    return f
+    
+def last_two(l):
+    # Used to
+    f = f"{l[len(l) - 2]}{l[len(l) - 1]}"
+    return f
+def bonus(nid):
+    first = nid[0] == "2" or nid[0] == "3"
+    s = f"{nid[1]}{nid[2]}"
+    sec = int(s) > -1 and int(s) < 100
+    f = f"{nid[3]}{nid[4]}"
+    four = int(f) > 0 and int(f) < 12
+    si = f"{nid[5]}{nid[6]}"
+    six = int(si) > 0 and int(si) < 32
+    return first, sec, four, six
+def is_id_valid(national_id):
+    l = len(national_id) == 14
+    n = national_id.isdigit()
+    if n == False or l == False:
+        fd, sd, fod, six = True, True, True, True
+    else:
+        fd, sd, fod, six = bonus(national_id)
+
+    return l, n, fd, sd, fod, six
+def booling(b, m, f):
+    fin = f
+    if b == False:
+        st.warning(m)
+        fin = False
+    return fin
+
 def stud():
  st.header("AI Study Buddy")
  st.write("Welcome to AI Study Buddy!")
@@ -60,13 +102,7 @@ def stud():
   else:
    st.success(sci[ri(1, 5)])
 
-def gen_two():
-        f = f"{ri(0,9)}"
-        f = f"{f}{ri(0,9)}"
-        return f
-def last_two(l):
-    f = f"{l[len(l) - 2]}{l[len(l) - 1]}"
-    return f
+
 def blaze():
     st.header("BlazeX Email Creator")
     st.write("Generate your work email in a flash with BlazeX Email Creator!")
@@ -86,7 +122,7 @@ def blaze():
     
     def make_email(first, last, phone, depart, departs):
         two_rand = gen_two()
-        pnlt = last_two(phone)
+        pnlt = phone[::-2]
         f = f"{first}.{last}.{departs[depart]}.{pnlt}.{two_rand}@BlazeX.com"
         return f
 
@@ -100,30 +136,6 @@ def blaze():
             exp.table(data)
         else:
             st.error("Please Enter All Your Correct Information")
-def bonus(nid):
-    first = nid[0] == "2" or nid[0] == "3"
-    s = f"{nid[1]}{nid[2]}"
-    sec = int(s) > -1 and int(s) < 100
-    f = f"{nid[3]}{nid[4]}"
-    four = int(f) > 0 and int(f) < 12
-    si = f"{nid[5]}{nid[6]}"
-    six = int(si) > 0 and int(si) < 32
-    return first, sec, four, six
-def is_id_valid(national_id):
-    l = len(national_id) == 14
-    n = national_id.isdigit()
-    if n == False or l == False:
-        fd, sd, fod, six = True, True, True, True
-    else:
-        fd, sd, fod, six = bonus(national_id)
-
-    return l, n, fd, sd, fod, six
-def booling(b, m, f):
-    fin = f
-    if b == False:
-        st.warning(m)
-        fin = False
-    return fin
 def niv():
     st.header("National ID Validator")
     st.write("Welcome to National ID Validator!")
