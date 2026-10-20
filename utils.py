@@ -64,7 +64,7 @@ def booling(b, m, f):
 def stud():
  # Mission 1 Studdy Buddy
  # Create a welcome header and message
- st.header("AI Study Buddy 🤖")
+ st.markdown("## AI Study Buddy 🤖")
  st.write("Welcome to AI Study Buddy!")
  
  st.divider()
@@ -130,7 +130,7 @@ def stud():
 def blaze():
     # Mission 2
     # Welcome Messages
-    st.header("BlazeX Email Creator 📧")
+    st.markdown("## BlazeX Email Creator 📧")
     st.write("Generate your work email in a flash with BlazeX Email Creator!")
     # Take User's Information
     fn = st.text_input("Enter your first name", max_chars=12, icon='🧑') # max len = 12 ch
@@ -162,7 +162,7 @@ def blaze():
 def niv():
     # Mission 3
     # Welcome Messages
-    st.header("National ID Validator")
+    st.markdown("## National ID Validator 🪪")
     st.write("Welcome to National ID Validator!")
     # Give User Import Rules about Id
     st.image("rules.png", caption="Important Rules for First Seven Digits")
