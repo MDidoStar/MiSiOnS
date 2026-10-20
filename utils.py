@@ -64,7 +64,7 @@ def booling(b, m, f):
 def stud():
  # Mission 1 Studdy Buddy
  # Create a welcome header and message
- st.header("AI Study Buddy")
+ st.header("AI Study Buddy 🤖")
  st.write("Welcome to AI Study Buddy!")
  
  st.divider()
