@@ -149,6 +149,8 @@ def blaze():
     # Generate an Email
     if st.button("Make Email"):
         wait("Generating Email", 3)
+        # Give a success message that the email is generated
+        st.success("Email Generated Successfully")
         if pn.isdigit() and len(pn)  > 2 and pn and fn and ln:
             email = make_email(fn, ln, pn, dp, dps)
             # Give Extra Info about User
