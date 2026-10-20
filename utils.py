@@ -118,13 +118,13 @@ def stud():
   wait("Generating Tip", 3)
   # Check which subject is the tip and generate it
   if sub == "English":
-   st.success(eng[ri(1, 5)])
+   st.success(eng[ri(1, 5) - 1])
   elif sub == "Mathematics":
-   st.success(math[ri(1, 5)])
+   st.success(math[ri(1, 5) - 1])
   elif sub == "ICT":
-   st.success(ict[ri(1, 5)])
+   st.success(ict[ri(1, 5) - 1])
   else:
-   st.success(sci[ri(1, 5)])
+   st.success(sci[ri(1, 5) - 1])
 
 
 def blaze():
