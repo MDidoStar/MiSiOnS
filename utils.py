@@ -93,7 +93,7 @@ def booling(b, m, f):
     return fin
 def niv():
     st.header("National ID Validator")
-    st.write("Welcome to AI Study Buddy!")
+    st.write("Welcome to National ID Validator!")
     st.image("rules.png", caption="Important Rules for First Seven Digits")
     id = st.text_input("Enter 14-digit National ID:")
     b = st.button("Validate")
