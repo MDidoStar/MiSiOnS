@@ -196,4 +196,18 @@ def niv():
         if f_bool == False:
             st.error("Incomplete: ID Invalid")
         else:
-           st.success("Complete: ID Valid") 
+           st.success("Complete: ID Valid")
+           # Collection User Info in Variables
+           if id[0] == 2:
+            # Set Century and Year
+            c = "1900 - 1999"
+            y = f"19{id[1]}{id[2]}"
+           else:
+            c = "2000 - 2099"
+            y = f"20{id[1]}{id[2]}"
+           # Get Month
+           m = int(f"{id[3]}{id[4]}")
+           # Get Day
+           d = int(f"{id[5]}{id[6]}")
+           data_n = {"Century": c, "Year": y, "Month": m, "Day": d}
+           st.table(data_n)
