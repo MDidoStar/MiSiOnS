@@ -11,7 +11,7 @@ st.title("Missions")
 missions = [
 "AI Study Buddy (Mission 1) 🤖",
 "BlazeX Email Creator (Mission 2) 📧",
-"National Id Validator (Mission 3)"
+"National Id Validator (Mission 3) 🪪"
 ]
 m = st.selectbox("Chosse Which Mission to show", options=missions)
 
