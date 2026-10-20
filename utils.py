@@ -210,4 +210,5 @@ def niv():
            # Get Day
            d = int(f"{id[5]}{id[6]}")
            data_n = {"Century": c, "Year": y, "Month": m, "Day": d}
-           st.table(data_n)
+           expand = st.expander("Extra Information")
+           expand.table(data_n)
