@@ -5,28 +5,61 @@ def wait(l,s):
     with st.spinner(l):
         sl(s)
 def stud():
-    st.header("AI Study Buddy")
-    st.write("Welcome to AI Study Buddy!")
-    st.divider()
-    subjects = ["English", "Mathematics", "Science", "ICT"]
-    eng = ["Set Helpful Targets", "Don't Be Afraid of Mistakes", "Study Little and Often", "Focus on Communication", "Stay Organized and Consistent"]
-    math = ["Allow Plenty of Study Time", "Practice Past Questions", "Create a Consistent Study Routine", "Understand the 'Why' Behind the Math", "Use Active Learning Techniques"]
-    sci = ["Active Recall", "Spaced Repetition", "Interleaving", "Mnemonic Devices", "Focused Study Sessions"]
-    ict = ["Set Up a Study Schedule with Digital Calendars", "Use Educational Apps", "Use Note-Taking Apps", "Join Collaborative Study Groups", "Use Playlists to Help Focus"] # https://classtechtips.com/2023/11/20/study-tips/
-    sub = st.selectbox("Choose a Subject", options=subjects)
-    ta = st.text_area("Write The Note you need help with")
-    b = st.button("Get Study Tip")
-    if b:
-        wait("Generating Tip", 3)
+ st.header("AI Study Buddy")
+ st.write("Welcome to AI Study Buddy!")
+ st.divider()
+ subjects = [
+"English",
+"Mathematics",
+"Science",
+"ICT"
+]
+ eng = [
+"Set Helpful Targets",
+"Don't Be Afraid of Mistakes",
+"Study Little and Often",
+"Focus on Communication",
+"Stay Organized and Consistent"
+]
+ math = [
+"Allow Plenty of Study Time",
+"Practice Past Questions",
+"Create a Consistent Study Routine",
+"Understand the 'Why' Behind the Math", 
+"Use Active Learning Techniques"
+]
+ sci = [
+"Active Recall", 
+"Spaced Repetition", 
+"Interleaving", 
+"Mnemonic Devices", 
+"Focused Study Sessions"
+]
+ ict = [
+"Set Up a Study Schedule with Digital Calendars", 
+"Use Educational Apps", 
+"Use Note-Taking Apps", 
+"Join Collaborative Study Groups", 
+"Use Playlists to Help Focus"
+] 
+# https://classtechtips.com/2023/11/20/study-tips/
 
-        if sub == "English":
-            st.success(eng[ri(1, 5)])
-        elif sub == "Mathematics":
-            st.success(math[ri(1, 5)])
-        elif sub == "ICT":
-            st.success(ict[ri(1, 5)])
-        else:
-            st.success(sci[ri(1, 5)])
+
+ sub = st.selectbox("Choose a Subject", options=subjects)
+ ta = st.text_area("Write The Note you need help with")
+ b = st.button("Get Study Tip")
+ if b:
+  wait("Generating Tip", 3)
+
+  if sub == "English":
+   st.success(eng[ri(1, 5)])
+  elif sub == "Mathematics":
+   st.success(math[ri(1, 5)])
+  elif sub == "ICT":
+   st.success(ict[ri(1, 5)])
+  else:
+   st.success(sci[ri(1, 5)])
+
 def gen_two():
         f = f"{ri(0,9)}"
         f = f"{f}{ri(0,9)}"
