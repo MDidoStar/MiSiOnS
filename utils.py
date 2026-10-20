@@ -68,16 +68,15 @@ def stud():
  st.write("Welcome to AI Study Buddy!")
  
  st.divider()
-
-# Create a selectbox 
-# to choose which subject will I give the tip about 
-
-subjects = [
-"English",
-"Mathematics",
-"Science",
-"ICT"
-]
+ # Create a selectbox 
+ # to choose which subject will I give the tip about 
+ 
+ subjects = [
+ "English",
+ "Mathematics",
+ "Science",
+ "ICT"
+ ]
  sub = st.selectbox("Choose a Subject", options=subjects)
  # Create a text area
  # to know what the tip is about
@@ -86,33 +85,33 @@ subjects = [
  b = st.button("Get Study Tip")
  # Generate Tips 
  eng = [
-"Set Helpful Targets",
-"Don't Be Afraid of Mistakes",
-"Study Little and Often",
-"Focus on Communication",
-"Stay Organized and Consistent"
-]
+ "Set Helpful Targets",
+ "Don't Be Afraid of Mistakes",
+ "Study Little and Often",
+ "Focus on Communication",
+ "Stay Organized and Consistent"
+ ]
  math = [
-"Allow Plenty of Study Time",
-"Practice Past Questions",
-"Create a Consistent Study Routine",
-"Understand the 'Why' Behind the Math", 
-"Use Active Learning Techniques"
-]
+ "Allow Plenty of Study Time",
+ "Practice Past Questions",
+ "Create a Consistent Study Routine",
+ "Understand the 'Why' Behind the Math", 
+ "Use Active Learning Techniques"
+ ]
  sci = [
-"Active Recall", 
-"Spaced Repetition", 
-"Interleaving", 
-"Mnemonic Devices", 
-"Focused Study Sessions"
-]
+ "Active Recall", 
+ "Spaced Repetition", 
+ "Interleaving", 
+ "Mnemonic Devices", 
+ "Focused Study Sessions"
+ ]
  ict = [
-"Set Up a Study Schedule with Digital Calendars", 
-"Use Educational Apps", 
-"Use Note-Taking Apps", 
-"Join Collaborative Study Groups", 
-"Use Playlists to Help Focus"
-] 
+ "Set Up a Study Schedule with Digital Calendars", 
+ "Use Educational Apps", 
+ "Use Note-Taking Apps", 
+ "Join Collaborative Study Groups", 
+ "Use Playlists to Help Focus"
+ ] 
  # https://classtechtips.com/2023/11/20/study-tips/
  
  if b:
