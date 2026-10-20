@@ -37,7 +37,7 @@ def bonus(nid):
     s = f"{nid[1]}{nid[2]}"
     sec = int(s) > -1 and int(s) < 100
     f = f"{nid[3]}{nid[4]}"
-    four = int(f) > 0 and int(f) < 12
+    four = int(f) > 0 and int(f) < 13
     si = f"{nid[5]}{nid[6]}"
     six = int(si) > 0 and int(si) < 32
     return first, sec, four, six
@@ -200,7 +200,7 @@ def niv():
         else:
            st.success("Complete: ID Valid")
            # Collection User Info in Variables
-           if id[0] == 2:
+           if id[0] == "2":
             # Set Century and Year
             c = "1900 - 1999"
             y = f"19{id[1]}{id[2]}"
