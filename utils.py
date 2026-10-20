@@ -130,7 +130,7 @@ def stud():
 def blaze():
     # Mission 2
     # Welcome Messages
-    st.header("BlazeX Email Creator")
+    st.header("BlazeX Email Creator 📧")
     st.write("Generate your work email in a flash with BlazeX Email Creator!")
     # Take User's Information
     fn = st.text_input("Enter your first name", max_chars=12, icon='🧑') # max len = 12 ch
